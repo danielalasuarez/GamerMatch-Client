@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
+import GamerCards from "./components/GamerCards";
+import Header from './components/Header'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // BEM class naming convention (Block element modifier)
+    <div className="app">
+      
+
+      <Header />
+      <GamerCards />
+      {/* Swipe Buttons */}
+
     </div>
   );
 }
