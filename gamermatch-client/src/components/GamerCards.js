@@ -8,7 +8,7 @@ import "../style/gamerCards.css"
 
 
 
-// on line 13 we are storing the people in the state and initializing it with what the cards will have inside (switch to schema file later)
+// on line 13 we are storing the people in the state and initializing it with what the cards will have inside (switch to pull from back end and schema file later)
 function GamerCards() {
     const [people, setPeople] = useState([
         {
@@ -46,7 +46,7 @@ function GamerCards() {
                 key={person.name}
                 preventSwipe={['up', 'down']} //does not allow to swipe up and down 
                 //function below puts the card out of frame if it is swiped to the left and will console log because of the swiped function 
-                //these onSwipe and OnCardLeftScreen are all from the tinder card library
+                //these onSwipe and OnCardLeftScreen are all from the tinder card library.
                 onSwipe={(dir) => swiped(dir, person.name)}
                 onCardLeftScreen={() => outOfFrame(person.name)} //this function runs when the card is out of the frame
                 >

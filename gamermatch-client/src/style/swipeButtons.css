@@ -1,0 +1,68 @@
+
+
+.swipeButtons
+{
+    position: fixed;
+    bottom: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/* !important so it pays attention to this instead of material-ui's default  */
+
+/* 
+.swipeButtons .swipeButtons__replay{
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+.swipeButtons .swipeButtons__left{
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+.swipeButtons .swipeButtons__star{
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+.swipeButtons .swipeButtons__right{
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+.swipeButtons .swipeButtons__bolt{
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+} */
+
+/* !!!!!!!! Can just use .MuiIconButton-root to grab all of the buttons!!!!!!! */
+.swipeButtons .MuiIconButton-root {
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.4) !important;
+    padding: 1.5vw !important;
+}
+
+
+/* chnage color  */
+
+.swipeButtons .swipeButtons__replay{
+    color: orange;
+}
+
+.swipeButtons .swipeButtons__left{
+    color: red;
+}
+
+.swipeButtons .swipeButtons__star{
+    color: purple;
+}
+
+.swipeButtons .swipeButtons__right{
+    color: green;
+}
+
+.swipeButtons .swipeButtons__bolt{
+    color: blue;
+} 
