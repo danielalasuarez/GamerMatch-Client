@@ -16,8 +16,10 @@ function Header() {
             <PersonIcon fontSize='large' className='header__icon' /> 
             </IconButton>
 
-           <SportsEsportsIcon fontSize='large' className='header__logo'/>
-
+{/* using link to make gamer logo alwasy go to home page */}
+            <Link to='/'>
+                <SportsEsportsIcon fontSize='large' className='header__logo'/>
+           </Link>
 {/* here we will be using <Link> and use prop to="chats" from react router dom to trigger the /chat route when the chat button is clicked */}
            <Link to="/chats">
             <IconButton>

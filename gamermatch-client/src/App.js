@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter, Switch, Route, Link} from "react-router-dom"
 import './App.css';
+import ChatsScreen from "./components/ChatsScreen";
 import GamerCards from "./components/GamerCards";
 import Header from './components/Header'
 import SwipeButtons from './components/SwipeButtons'
@@ -22,7 +23,7 @@ function App() {
         <Header />
           <Switch>
             <Route path="/chats">
-              <h1>Chat path working</h1>
+              <ChatsScreen />
             </Route>
 
             <Route path="/">
