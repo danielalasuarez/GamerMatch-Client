@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter, Switch, Route, Link} from "react-router-dom"
 import './App.css';
 import GamerCards from "./components/GamerCards";
 import Header from './components/Header'
@@ -6,14 +7,31 @@ import SwipeButtons from './components/SwipeButtons'
 
 function App() {
   return (
-    // BEM class naming convention (Block element modifier)
+    // BEM class naming convention for CSS!!(Block element modifier)
     <div className="app">
       
 
-      <Header />
-      <GamerCards />
-      <SwipeButtons />
+      
+      
+      {/* <ChatsScreen />
+      <MatchedChatScreen /> */}
+{/* had to move the Header inside the browser router because in the Header.js we use the link for the chat icon */}
+      {/* the <Header/> will still be displayed on all pages because it is above and not in a path */}
+      
+      <BrowserRouter>
+        <Header />
+          <Switch>
+            <Route path="/chats">
+              <h1>Chat path working</h1>
+            </Route>
 
+            <Route path="/">
+              <GamerCards />
+              <SwipeButtons />
+            </Route>
+
+          </Switch>
+      </BrowserRouter>
     </div>
   );
 }

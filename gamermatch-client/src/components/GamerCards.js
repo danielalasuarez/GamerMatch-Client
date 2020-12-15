@@ -63,8 +63,10 @@ function GamerCards() {
             {/* for every single gamer then the following will display */}
             {people.map((person) => (
                 // <h1>{person.name}</h1> // works!!!!!!
+                //using the react tinder card package docs for the below
                 <TinderCard
                 className="swipe"
+                //keys to make the app faster so it wont re render the entire thing just re render the list
                 key={person.name}
                 preventSwipe={['up', 'down']} //does not allow to swipe up and down 
                 //function below puts the card out of frame if it is swiped to the left and will console log because of the swiped function 
