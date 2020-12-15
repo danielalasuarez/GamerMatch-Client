@@ -26,3 +26,8 @@ border-bottom: 1.5px solid darkgray;
  .chat__preview__timestamp {
      color:gray;
  }
+ /* inheret leaves it to be the same color as we set up before instead of turning purple when the link is clicked  */
+ a{
+     text-decoration: none;
+     color: inherit;
+ }

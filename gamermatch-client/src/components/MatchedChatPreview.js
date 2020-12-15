@@ -2,10 +2,14 @@ import React from 'react'
 //using material-ui to styule the preview rows
 //Avatar is for the circle profile pic
 import Avatar from '@material-ui/core/Avatar'
+//USING LINK SO EACH MESSAGE CAN LINK TO THE ACTIVECHAT COMPONENT
+import { Link } from "react-router-dom";
 import "../style/MatchedChatPreview.css"
 
 function MatchedChatPreview({name, message, timestamp, profilePicture}) {
     return (
+        //to='/chats/:person doesnt work needs to be the below
+        <Link to={`/chats/${name}`}>
         <div className="chat__preview">
             {/* this says that if there is no profile pic to be put in the avatar then display the name in the avatar  */}
             <Avatar className="chat__preview__image" alt={name} src={profilePicture} />
@@ -15,7 +19,7 @@ function MatchedChatPreview({name, message, timestamp, profilePicture}) {
             </div>
             <p className="chat__preview__timestamp">{timestamp}</p>
         </div>
-        
+        </Link>
     )
 }
 
