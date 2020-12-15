@@ -50,9 +50,13 @@
     padding: 10px ;
     border: none;
 
+
 }
 
 .active__chat__input__button{
-
+border: none;
+background-color: white;
+margin-left: 20px;
+margin-right: 20px;
 }
 
