@@ -9,13 +9,11 @@ function MatchedChatPreview({name, message, timestamp, profilePicture}) {
         <div className="chat__preview">
             {/* this says that if there is no profile pic to be put in the avatar then display the name in the avatar  */}
             <Avatar className="chat__preview__image" alt={name} src={profilePicture} />
-        
-            <div>
+            <div className="chat__preview__info">
                 <h2>{name}</h2>
                 <p>{message}</p>
-                <p classname="chat__preview__timestamp">{timestamp}</p>
             </div>
-        
+            <p className="chat__preview__timestamp">{timestamp}</p>
         </div>
         
     )

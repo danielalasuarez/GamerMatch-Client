@@ -1,7 +1,28 @@
 .chat__preview {
 display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px;
+height: 60px;
+border-bottom: 1.5px solid darkgray;
 }
 
-/* .chat__preview__image
+/* //found this in a tutroial flex:1 allows for this specific div to take up as much space as it can and push it 
+//pretty much gives importance over psace around
+// makes more white space between .chat__preview__info and .chat__preview__timestamp */
+.chat__preview__info{
+    flex: 1;
+}
 
-.chat__preview__timestamp */
+.chat__preview__info p {
+    margin-top: 5px;
+    color: black;
+}
+
+.chat__preview__image{
+    margin-right: 15px;
+}
+
+ .chat__preview__timestamp {
+     color:gray;
+ }
