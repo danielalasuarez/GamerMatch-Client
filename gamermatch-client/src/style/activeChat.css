@@ -1,0 +1,40 @@
+
+
+
+.active__chat__match__message{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.active__chat__back__chats{
+    margin-top: 30px;
+}
+
+.active__chat__back__home__arrow{
+    font-weight: bolder;
+    color: red;
+}
+
+.active__chat__messages{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.active__chat__text{
+    margin-left: 10px;
+    background-color:lightgray;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.active__chat__text__user{
+    margin-left: 10px;
+    background-color:blueviolet;
+    border-radius: 25px;
+    padding: 15px;
+    margin-left: auto;
+}
+
