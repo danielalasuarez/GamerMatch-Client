@@ -1,0 +1,8 @@
+.chats .chats__back__home{
+    margin-top: 30px;
+}
+
+.chats__back__home__arrow {
+    font-weight: bolder;
+    color: red;
+}

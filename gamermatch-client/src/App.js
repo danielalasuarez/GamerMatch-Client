@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter, Switch, Route, Link} from "react-router-dom"
 import './App.css';
+import ActiveChat from "./components/ActiveChat";
 import ChatsScreen from "./components/ChatsScreen";
 import GamerCards from "./components/GamerCards";
 import Header from './components/Header'
@@ -13,15 +14,20 @@ function App() {
       
 
       
-      
-      {/* <ChatsScreen />
-      <MatchedChatScreen /> */}
+    
 {/* had to move the Header inside the browser router because in the Header.js we use the link for the chat icon */}
       {/* the <Header/> will still be displayed on all pages because it is above and not in a path */}
       
       <BrowserRouter>
         <Header />
           <Switch>
+
+{/* :person is an id so it can change any person  */}
+          <Route path="/chats/:person">
+              <ActiveChat />
+            </Route>
+
+
             <Route path="/chats">
               <ChatsScreen />
             </Route>
