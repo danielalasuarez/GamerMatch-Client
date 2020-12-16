@@ -48,13 +48,14 @@ function ActiveChat() {
             ))}
 
             {/* INPUT TEXT  */}
-            <div className="active__chat__input">
-            <Link to='/chats'>
+    
+            
+                <form className="active__chat__input">
+                <Link to='/chats'>
                 <IconButton className='active__chat__back__chats'>
                     <ArrowBackTwoToneIcon fontSize='large' className="active__chat__back__home__arrow"/>
                 </IconButton>
             </Link>
-                <form>
                     <input 
                     className="active__chat__input__box"
                     type="text" />
@@ -62,7 +63,6 @@ function ActiveChat() {
                     
                 </form>
                
-            </div>
 
            
         </div>
