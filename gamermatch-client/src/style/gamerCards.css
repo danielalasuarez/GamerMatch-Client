@@ -33,9 +33,19 @@ margin-top: 10vh;
 
 .card h3 {
     position: absolute;
-    bottom: 0;
+    top:0;
     margin: 10px;
     color: white;
+}
+.card h4 {
+    position: absolute;
+    bottom:10%;
+    margin: 10px;
+    color: white;
+}
+
+.card .game__highlights {
+    bottom: 0;
 }
 
 /* when you get other stuff working add the rest of the scheama styling kill death ratio.. etc */

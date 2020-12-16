@@ -31,11 +31,11 @@ function GamerCards() {
     //same as component did mount
     //in the [] at the end you can add [name] id the name changes and it will refire the code and run again once 
     useEffect(() => {
-//async function below
+//async function below calling the backend 
         async function fetchData() {
             const request = await axios.get("/gamers/cards") // calling our endpoint from back
             
-            //setting the people variable on line 27 whatever request.data comes back as
+            //setting the people variable on line 27 to whatever request.data comes back as
             setPeople(request.data);
         }
 //calling it below
@@ -43,7 +43,7 @@ function GamerCards() {
     }, []) 
 
     console.log(people)
-    // below are function that we are going to pass below on the display of the card
+    // below are functions that we are going to pass below on the display of the card
 
     //function to swipe card .... console logs when the person swipes left
     const swiped = (direction, nameDelete) => {
@@ -82,7 +82,9 @@ function GamerCards() {
                     className='card'
                     >
 
-                        <h3>{person.name}</h3>
+                        <h3>Gamer Tag: {person.name}</h3>
+                        <h4>Kill Death Ratio: {person.killDeathRatio}</h4>
+                        <h4 className="game__highlights"style={{ backgroundImage: 'url(' + person.gameHighlights + ') '}}>Game Highlights: </h4>
                     </div>
                 </TinderCard>
             ))}
