@@ -12,9 +12,11 @@ function Header() {
     return (
         <div className= 'header'>
             
+            <Link to='/profile'>
             <IconButton> 
             <PersonIcon fontSize='large' className='header__icon' /> 
             </IconButton>
+            </Link>
 
 {/* using link to make gamer logo alwasy go to home page */}
             <Link to='/'>

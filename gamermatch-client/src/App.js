@@ -5,6 +5,7 @@ import ActiveChat from "./components/ActiveChat";
 import ChatsScreen from "./components/ChatsScreen";
 import GamerCards from "./components/GamerCards";
 import Header from './components/Header'
+import Profile from './components/Profile'
 import SwipeButtons from './components/SwipeButtons'
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
         <Header />
           <Switch>
 
-{/* :person is an id so it can change any person  */}
+          <Route path="/profile">
+              <Profile />
+            </Route>
+{/* :person is an id so it can change any person this is for the actual message */}
           <Route path="/chats/:person">
               <ActiveChat />
             </Route>
