@@ -47,7 +47,7 @@ setUserData({ //no longer undefined now we are setting the state
 });
 }
 }
-checkLoggedIn();
+checkLoggedIn(); //WORKS!!!!!!! this function now allows all of the components to have access to user :)
 },[])
 
 
