@@ -26,7 +26,7 @@ const checkLoggedIn = async () => {
 let token = localStorage.getItem("auth-token"); //get the auth token on the local storage 
 if (token === null){ // if token doesnt exist the token becomes null 
   localStorage.setItem("auth.token", ""); //if token is null set it to an empty string 
-  token = ""; //sets the token on line 25 into an empty string 
+  token = ""; //sets the token on line 18 into an empty string 
 } // after this is done we put that empty string in the headers (see lines below) and send empty string to backend
 
 const tokenResponse = await axios.post("/profile/tokenIsValid", null, //null means dont send any data to the body
