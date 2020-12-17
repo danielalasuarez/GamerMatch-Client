@@ -3,6 +3,7 @@ import UserContext from '../../context/UserContext';
 import ArrowBackTwoToneIcon from '@material-ui/icons/ArrowBackTwoTone';
 import IconButton from '@material-ui/core/IconButton';
 import { Link, useHistory } from "react-router-dom"
+import Errors from './Errors'
 import "../../style/register.css"
 import axios from '../../axios'
 
@@ -19,6 +20,7 @@ function Register() {
     const[imgUrl, setImgUrl] = useState();
     const[killDeathRatio, setKillDeathRatio] = useState();
     const[gameHighlights, setGameHighlights] = useState();
+    const[error, setError] = useState();
 
     //enable the context we imported 
     const {setUserData} = useContext(UserContext);
@@ -28,6 +30,7 @@ function Register() {
 
     //function that will submit our form
     const submit = async (event) => {
+        try {
         event.preventDefault(); //to prevent reloading and emptying out before it is sent to back
         const newUser = {name, email, password, imgUrl, killDeathRatio, gameHighlights}; //grabbing the state which is what the user inputted
         await axios.post("/profile/register", newUser); //newUser is the updated states and the data we will post tp /profile/register
@@ -44,11 +47,25 @@ function Register() {
     //this will set the token to the local storage for later use 
     localStorage.setItem("auth-token", loginResponse.data.token);
     history.push("/"); //redirect to home 
-    }; //logged in!!!! 
+    } //logged in!!!! 
+    catch(err) {
+        //if err.response.msg.data exists in backend set the error state setError
+        err.response.data.msg && setError(err.response.data.msg); //both sides have to be true to go on
+    }
+    
+}
+
 
     return (
         <div>
             <h1>SIGN UP</h1>
+            {/* if there is an error in our state above  */}
+            {/* create the Error component where the message (message written in the error component)  */}
+            {/* is equal to the error state  */}
+            {/* then run the function that sets the error state to undefined (clears it )  */}
+            {error && (
+            <Errors message={error} clearError={() => setError(undefined) } />
+            )} 
         <form onSubmit={submit}>
         {/* name  */}
             <label htmlFor="register__gamerTag">Gamer Tag</label> 

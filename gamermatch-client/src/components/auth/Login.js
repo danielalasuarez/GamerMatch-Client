@@ -4,11 +4,13 @@ import IconButton from '@material-ui/core/IconButton';
 import { Link, useHistory } from "react-router-dom"
 import UserContext from '../../context/UserContext';
 import axios from '../../axios'
+import Errors from './Errors'
 
 function Login() {
 //store the values from each input field in the state 
     const[email, setEmail] = useState();
     const[password, setPassword] = useState();
+    const[error, setError] = useState();
 
 //enable the context we imported 
        const {setUserData} = useContext(UserContext);
@@ -18,6 +20,7 @@ function Login() {
 
         //function that will submit our form
     const submit = async (event) => {
+        try {
         event.preventDefault(); //to prevent reloading and emptying out before it is sent to back
         const loginUser = {email, password}; //grabbing the state which is what the user inputted
 
@@ -32,11 +35,19 @@ function Login() {
     //this will set the token to the local storage for later use 
     localStorage.setItem("auth-token", loginResponse.data.token);
     history.push("/"); //redirect to home 
+            }  catch(err) {
+                //if err.response.msg.data exists in backend set the error state setError
+                err.response.data.msg && setError(err.response.data.msg); //both sides have to be true to go on
+            }
     }; //logged in!!!! 
 
     return (
         <div>
             <h1>LOG IN</h1>
+
+            {error && (
+            <Errors message={error} clearError={() => setError(undefined) } />
+            )} 
 
             <form onSubmit={submit}>
         {/* email */}
