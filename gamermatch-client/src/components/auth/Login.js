@@ -34,7 +34,7 @@ function Login() {
     });
     //this will set the token to the local storage for later use 
     localStorage.setItem("auth-token", loginResponse.data.token);
-    history.push("/"); //redirect to home 
+    history.push("/"); //redirect to gamermatch to start swiping
             }  catch(err) {
                 //if err.response.msg.data exists in backend set the error state setError
                 err.response.data.msg && setError(err.response.data.msg); //both sides have to be true to go on

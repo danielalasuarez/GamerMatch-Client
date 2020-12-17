@@ -12,7 +12,7 @@ function Header() {
     return (
         <div className= 'header'>
             
-            <Link to='/profile'>
+            <Link to='/displayprofile'>
             <IconButton> 
             <PersonIcon fontSize='large' className='header__icon' /> 
             </IconButton>

@@ -9,6 +9,8 @@ import Profile from './components/auth/Profile'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import SwipeButtons from './components/SwipeButtons'
+import Home from './components/Home'
+import DisplayProfile from './components/DisplayProfile'
 import axios from './axios'
 import UserContext from './context/UserContext' //gives us user data and bring it to all of the components
 
@@ -68,31 +70,38 @@ checkLoggedIn(); //WORKS!!!!!!! this function now allows all of the components t
         <Header />
           <Switch>
 
-          <Route path="/profile">
+          <Route exact path="/displayprofile">
+              <DisplayProfile />
+            </Route>
+
+          <Route exact path="/profile">
               <Profile />
             </Route>
 
-            <Route path="/login">
+            <Route exact path="/login">
               <Login />
             </Route>
 
-            <Route path="/register">
+            <Route exact path="/register">
               <Register />
             </Route>
 {/* :person is an id so it can change any person this is for the actual message */}
-          <Route path="/chats/:person">
+          <Route exact path="/chats/:person">
               <ActiveChat />
             </Route>
 
 
-            <Route path="/chats">
+            <Route exact path="/chats">
+              <Home />
               <ChatsScreen />
             </Route>
 
-            <Route path="/">
+            <Route exact path="/">
+              <Home />
               <GamerCards />
               <SwipeButtons />
             </Route>
+            
 
           </Switch>
           </UserContext.Provider>

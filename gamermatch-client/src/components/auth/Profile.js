@@ -3,9 +3,7 @@ import React, { useContext } from 'react'
 import UserContext from '../../context/UserContext'
 import Login from './Login'
 import Register from './Register'
-import { Link } from "react-router-dom"
-import ArrowBackTwoToneIcon from '@material-ui/icons/ArrowBackTwoTone';
-import IconButton from '@material-ui/core/IconButton';
+import Home from '../../components/Home'
 import { useHistory } from "react-router-dom" //using react hooks again 
 
 function Profile() {
@@ -33,7 +31,9 @@ function Profile() {
     return (
         <div>
             <h1>GAMER PROFILE</h1>
-            
+            <h1>MAIN PAGE</h1>
+            <h3>You must register or be logged in in order to match with a gamer!</h3>
+            <Home />
             {userData.user ? (//if user in user data exists (if it is not null of undefined) 
                 // above is checking if the user is signed in 
                 <button onClick={logout}>LOG OUT</button>  //show logout button 
@@ -50,11 +50,7 @@ function Profile() {
                
             
             
-                <Link to='/'>
-                <IconButton className='back'>
-                    <ArrowBackTwoToneIcon fontSize='large' />
-                </IconButton>
-            </Link>
+                
             
 
            
