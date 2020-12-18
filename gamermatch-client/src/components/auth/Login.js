@@ -43,12 +43,12 @@ function Login() {
 
     return (
         <div>
-            <h1>LOG IN</h1>
+            <h1 className="title">LOG IN</h1>
 
             {error && (
             <Errors message={error} clearError={() => setError(undefined) } />
             )} 
-
+    <div className="wrapper">
             <form onSubmit={submit}>
         {/* email */}
             <label htmlFor="login__email">Email</label>
@@ -66,8 +66,9 @@ function Login() {
             />
 
         {/* submit  */}
-            <input type="submit" value="Log In" />
+            <input className="btn" type="submit" value="Log In" />
             </form>
+            </div>
 
             <Link to='/profile'>
                 <IconButton className='back'>

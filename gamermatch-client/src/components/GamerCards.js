@@ -59,6 +59,7 @@ function GamerCards() {
 
     return (
         <div className="gamerCards">
+            <h1 className="gamermatch__header">GAMER MATCH</h1>
             <div className="gamerCards__cardContainer">
             {/* for every single gamer then the following will display */}
             {people.map((person) => (

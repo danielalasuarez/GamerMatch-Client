@@ -5,6 +5,7 @@ import Login from './Login'
 import Register from './Register'
 import Home from '../../components/Home'
 import { useHistory } from "react-router-dom" //using react hooks again 
+import "../../style/profile.css"
 
 function Profile() {
     //userData and setUserData are brought in from app js UserContext.Provider

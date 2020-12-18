@@ -6,12 +6,15 @@ align-items: center;
 justify-content: space-between;
 z-index: 100;
 border-bottom: 1px solid #f9f9f9;
+background-color: #0ea6b8;
+
 }
 
 .header__icon{
-    padding: 20px;
+   color:white;
 }
 
 .header__logo{
     font-size: 2.1875rem;
+    color: white;
 }

@@ -7,12 +7,22 @@
     padding: 20px;
     max-width: 85vw;
     height: 50vh;
+    margin-top: -45px;
     /* 0.4 is the trasparency */
     box-shadow: 0px 19px 53px 0px rgba(0, 0, 0, 0.4); 
     border-radius: 20px;
     /* cover makes it not repeat  */
     background-size: cover;
     background-position: center;
+}
+
+.gamermatch__header{
+    color: white;
+    text-align: center;
+    
+    margin-top: 32px;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .gamerCards__cardContainer {
@@ -35,13 +45,13 @@ margin-top: 10vh;
     position: absolute;
     top:0;
     margin: 10px;
-    color: white;
+    color: black;
 }
 .card h4 {
     position: absolute;
     bottom:10%;
     margin: 10px;
-    color: white;
+    color: black;
 }
 
 .card .game__highlights {

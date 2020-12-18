@@ -58,7 +58,7 @@ function Register() {
 
     return (
         <div>
-            <h1>SIGN UP</h1>
+            <h1 className="title">SIGN UP</h1>
             {/* if there is an error in our state above  */}
             {/* create the Error component where the message (message written in the error component)  */}
             {/* is equal to the error state  */}
@@ -66,7 +66,10 @@ function Register() {
             {error && (
             <Errors message={error} clearError={() => setError(undefined) } />
             )} 
+            <div className="wrapper">
+                
         <form onSubmit={submit}>
+           
         {/* name  */}
             <label htmlFor="register__gamerTag">Gamer Tag</label> 
             <input 
@@ -109,12 +112,14 @@ function Register() {
             type="text" 
             onChange={(e) => setGameHighlights(e.target.value)}
             />
+            
         {/* submit  */}
-            <input type="submit" value="Register" />
+            <input className="btn" type="submit" value="Register" />
 
         </form>
+        
 
-
+        </div>
 
 
 
